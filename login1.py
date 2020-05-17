@@ -1,0 +1,152 @@
+# -*- coding: utf-8 -*-
+
+# Form implementation generated from reading ui file 'login1.ui'
+#
+# Created by: PyQt5 UI code generator 5.13.0
+#
+# WARNING! All changes made in this file will be lost!
+
+import fire
+from PyQt5 import QtCore, QtGui, QtWidgets
+from welcome import Ui_WelcomeWindow 
+
+class Ui_MainWindow(object):
+    def openWindow(self):
+        self.WelcomeWindow = QtWidgets.QMainWindow()
+        self.ui = Ui_WelcomeWindow(self.email)
+        self.ui.setupUi(self.WelcomeWindow)
+        loginWindow.close()
+        self.WelcomeWindow.show()
+
+    def setupUi(self, MainWindow):
+        MainWindow.setObjectName("MainWindow")
+        MainWindow.resize(545, 402)
+        MainWindow.setCursor(QtGui.QCursor(QtCore.Qt.ArrowCursor))
+        self.centralwidget = QtWidgets.QWidget(MainWindow)
+        self.centralwidget.setAutoFillBackground(False)
+        self.centralwidget.setObjectName("centralwidget")
+        self.background = QtWidgets.QLabel(self.centralwidget)
+        self.background.setGeometry(QtCore.QRect(-20, -40, 591, 441))
+        self.background.setText("")
+        self.background.setPixmap(QtGui.QPixmap("background4.jpg"))
+        self.background.setScaledContents(True)
+        self.background.setObjectName("background")
+        self.background.raise_()
+        self.head = QtWidgets.QLabel(self.centralwidget)
+        self.head.setGeometry(QtCore.QRect(100, 50,500, 60))
+        font = QtGui.QFont()
+        font.setFamily("Nirmala UI")
+        font.setWeight(70)
+        font.setPointSize(26)
+        self.head.setFont(font)
+        self.head.setTextFormat(QtCore.Qt.RichText)
+        self.head.setScaledContents(True)
+        self.head.setObjectName("head")
+        self.head.setText("STARK INDUSTRIES")
+        self.pass_lb = QtWidgets.QLabel(self.centralwidget)
+        self.pass_lb.setGeometry(QtCore.QRect(100, 190, 91, 31))
+        font = QtGui.QFont()
+        font.setFamily("Nirmala UI")
+        font.setPointSize(12)
+        self.pass_lb.setFont(font)
+        self.pass_lb.setTextFormat(QtCore.Qt.RichText)
+        self.pass_lb.setScaledContents(True)
+        self.pass_lb.setObjectName("pass_lb")
+        self.login = QtWidgets.QPushButton(self.centralwidget)
+        self.login.setGeometry(QtCore.QRect(180, 240, 101, 31))
+        font = QtGui.QFont()
+        font.setFamily("Nirmala UI")
+        font.setPointSize(11)
+        font.setBold(True)
+        font.setWeight(75)
+        self.login.setFont(font)
+        self.login.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
+        self.login.setAutoDefault(False)
+        self.login.setObjectName("login")
+        self.login.clicked.connect(self.clicked)
+        self.resets = QtWidgets.QLabel(self.centralwidget)
+        self.resets.setGeometry(QtCore.QRect(155, 350, 400, 31))
+        font = QtGui.QFont()
+        self.resets.setFont(font)
+        self.resets.setTextFormat(QtCore.Qt.RichText)
+        self.resets.setScaledContents(True)
+        self.resets.setObjectName("resets")
+        self.eid_lb = QtWidgets.QLabel(self.centralwidget)
+        self.eid_lb.setGeometry(QtCore.QRect(100, 140, 71, 31))
+        font = QtGui.QFont()
+        font.setFamily("Nirmala UI")
+        font.setPointSize(12)
+        self.eid_lb.setFont(font)
+        self.eid_lb.setTextFormat(QtCore.Qt.RichText)
+        self.eid_lb.setScaledContents(True)
+        self.eid_lb.setObjectName("eid_lb")
+        self.reset = QtWidgets.QPushButton(self.centralwidget)
+        self.reset.setGeometry(QtCore.QRect(160, 320, 150, 31))
+        font = QtGui.QFont()
+        font.setFamily("Nirmala UI")
+        font.setPointSize(10)
+        self.reset.setFont(font)
+        self.reset.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
+        self.reset.setAutoDefault(False)
+        self.reset.setObjectName("login")
+        self.reset.setText("Reset password")
+        self.reset.clicked.connect(self.clickedreset)
+        self.eid = QtWidgets.QLineEdit(self.centralwidget)
+        self.eid.setGeometry(QtCore.QRect(240, 150, 271, 22))
+        self.eid.setObjectName("eid")
+        self.passw = QtWidgets.QLineEdit(self.centralwidget)
+        self.passw.setGeometry(QtCore.QRect(240, 190, 271, 22))
+        self.passw.setEchoMode(QtWidgets.QLineEdit.Password)
+        self.passw.setObjectName("pass")
+        self.fail_lb = QtWidgets.QLabel(self.centralwidget)
+        self.fail_lb.setGeometry(QtCore.QRect(120, 290, 261, 16))
+        self.fail_lb.setLayoutDirection(QtCore.Qt.LeftToRight)
+        self.fail_lb.setAutoFillBackground(False)
+        self.fail_lb.setFrameShape(QtWidgets.QFrame.NoFrame)
+        self.fail_lb.setText("")
+        self.fail_lb.setScaledContents(False)
+        self.fail_lb.setObjectName("fail_lb")
+        MainWindow.setCentralWidget(self.centralwidget)
+        self.menubar = QtWidgets.QMenuBar(MainWindow)
+        self.menubar.setGeometry(QtCore.QRect(0, 0, 545, 26))
+        self.menubar.setObjectName("menubar")
+        MainWindow.setMenuBar(self.menubar)
+        self.statusbar = QtWidgets.QStatusBar(MainWindow)
+        self.statusbar.setObjectName("statusbar")
+        MainWindow.setStatusBar(self.statusbar)
+
+        self.retranslateUi(MainWindow)
+        QtCore.QMetaObject.connectSlotsByName(MainWindow)
+
+    def retranslateUi(self, MainWindow):
+        _translate = QtCore.QCoreApplication.translate
+        MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
+        self.pass_lb.setText(_translate("MainWindow", "Password"))
+        self.login.setText(_translate("MainWindow", "LOGIN"))
+        self.eid_lb.setText(_translate("MainWindow", "Email Id"))
+    def clicked(self):
+        self.email=self.eid.text()
+        password=self.passw.text()
+        try:
+            fire.auth.sign_in_with_email_and_password(self.email,password)
+            self.openWindow()
+        except Exception  :
+            self.fail_lb.setText("Please enter valid username and password")
+            self.resets.setText("")
+    def clickedreset(self):
+        self.fail_lb.setText("")
+        self.email=self.eid.text()
+        try:
+            fire.auth.send_password_reset_email(self.email)
+            self.resets.setText("password reset email sent")
+        except Exception:
+            self.resets.setText("please enter a valid email id")
+
+if __name__ == "__main__":
+    import sys
+    app = QtWidgets.QApplication(sys.argv)
+    loginWindow = QtWidgets.QMainWindow()
+    loginui = Ui_MainWindow()           
+    loginui.setupUi(loginWindow)
+    loginWindow.show()
+    sys.exit(app.exec_())
